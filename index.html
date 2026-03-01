@@ -2,60 +2,81 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>
-      Energy & Petroleum Products Trading | Black Cube International LLC
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="B2B trading company operating as a direct commercial link for petroleum-derived products and energy commodities."
+      content="Black Cube International LLC is an international trading company specializing in petroleum derivatives, energy products, and global commodities including ferrous, non-ferrous minerals, and agricultural goods."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Favicon standard -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <!-- PNG favicons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <!-- Apple Touch Icon (iPhone / iPad) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- SEO SEMANTICO -->
+    <meta name="author" content="Black Cube International LLC" />
+
+    <meta
+      name="keywords"
+      content="petroleum trading, petroleum derivatives, energy commodities, oil products, ferrous minerals, non ferrous minerals, agricultural commodities, international trading company"
+    />
+    <!-- FAVICONS -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
     <!-- Android / PWA -->
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="theme-color" content="#0b0b0b" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Black Cube International LLC</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="logo">BLACK CUBE INTERNATIONAL LLC</div>
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">What We Do</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-    <main>
-      <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <h1>
-            Energy & Petroleum<br />
-            <span>Products Trading</span>
-          </h1>
-          <p>
-            Reliable supply of petroleum-derived products for industrial and
-            commercial use.
-          </p>
-          <div class="hero-actions">
-            <a href="#products" class="btn primary">View Products</a>
-            <a href="#contact" class="btn secondary">Contact</a>
-          </div>
+    <nav class="navbar">
+      <div class="container navbar__content">
+        <div class="navbar__logo">Black Cube International LLC</div>
+        <button class="navbar__toggle">☰</button>
+        <ul class="navbar__menu">
+          <li><a href="#top" class="active">Home</a></li>
+          <li><a href="#about">What We Do</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="hero" id="top">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Energy &amp; Petroleum</p>
+        <h1 class="hero__title">
+          Products <span class="accent">Trading</span>
+        </h1>
+        <p class="hero__subtitle">
+          Reliable supply of petroleum-derived products<br />
+          for industrial and commercial use.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#products">View Products</a>
+          <a class="btn btn--ghost" href="#contact">Contact</a>
         </div>
-      </section>
-    </main>
+      </div>
+    </header>
+    <section class="about" id="about">
+      <div class="container about__grid">
+        <div class="about__text">
+          <h2>What We Do</h2>
+          <p>
+            Black Cube International LLC operates as a direct trading link
+            between verified buyers and established petroleum suppliers. We
+            focus on confidential, compliant and efficient B2B operations.
+          </p>
+        </div>
+
+        <div class="about__logo">
+          <img
+            src="./images/logo-blackcube.png"
+            alt="Black Cube International LLC Logo"
+          />
+        </div>
+      </div>
+    </section>
+    <script src="./scripts/menu.js"></script>
   </body>
 </html>
