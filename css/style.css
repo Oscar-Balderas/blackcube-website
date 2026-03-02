@@ -386,3 +386,371 @@ body {
     width: min(var(--container), 94%);
   }
 }
+
+/* ================= PRODUCTS ================= */
+
+.products {
+  position: relative;
+  padding: 110px 0;
+  overflow: hidden;
+
+  background: url("../images/granja-tanques.jpg") center / cover no-repeat;
+  background-attachment: fixed; /* efecto premium en desktop */
+}
+
+/* Overlay oscuro para que el texto se lea perfecto */
+.products::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(8, 12, 18, 0.8),
+    rgba(10, 25, 45, 0.5)
+  );
+  z-index: 0;
+}
+
+/* Asegura que el contenido quede encima del overlay */
+.products .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-header h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.section-header p {
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* GRID */
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* CARD */
+
+.product-card {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 36px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+  backdrop-filter: blur(6px);
+}
+
+.product-card h3 {
+  color: var(--gold);
+  margin-bottom: 18px;
+  font-size: 19px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* LISTAS */
+
+.product-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-card li {
+  color: #dcdcdc;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 16px;
+}
+
+.product-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* HOVER PREMIUM */
+
+.product-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.65);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .products {
+    padding: 80px 0;
+    background-attachment: scroll; /* evita lag en móvil */
+  }
+
+  .section-header {
+    margin-bottom: 50px;
+  }
+
+  .product-card {
+    padding: 28px;
+  }
+
+  .product-card h3 {
+    font-size: 17px;
+  }
+
+  .product-card li {
+    font-size: 13px;
+  }
+}
+
+/* ================= COMMODITIES ================= */
+
+.commodities {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+
+  background: url("../images/commodities\ \(2\).png") center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+/* Overlay oscuro premium para legibilidad */
+.commodities::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(5, 5, 5, 0.55),
+    rgba(10, 18, 30, 0.35)
+  );
+  z-index: 0;
+}
+
+/* Contenido encima del overlay */
+.commodities .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* GRID */
+
+.commodities__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ================= TEXT ================= */
+
+.commodities__text h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.commodities__text p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 18px;
+  max-width: 600px;
+  font-size: 16px;
+}
+
+/* ================= FORM ================= */
+
+.commodities__form {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+.commodities__form:hover {
+  border-color: var(--gold);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.commodities__form h3 {
+  margin-bottom: 24px;
+  color: var(--gold);
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.commodities__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs */
+
+.commodities__form input,
+.commodities__form textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 16px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.commodities__form input:focus,
+.commodities__form textarea:focus {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Botón ya usa tu clase global .btn--primary */
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .commodities__grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .commodities {
+    padding: 90px 0;
+    background-attachment: scroll; /* evita lag en móvil */
+  }
+
+  .commodities__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .commodities__form {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .commodities {
+    padding: 80px 0;
+  }
+
+  .commodities__text p {
+    font-size: 15px;
+  }
+}
+
+/* ================= CORPORATE ================= */
+
+.corporate {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(213, 166, 40, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(213, 166, 40, 0.06),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #0a0a0a, #111111);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Title */
+
+.corporate__content h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 700;
+}
+
+/* Grid */
+
+.corporate__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* Cards */
+
+.corporate__item {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.corporate__item:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* Labels */
+
+.label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* Values */
+
+.value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Optional status style (por si lo vuelves a usar) */
+
+.status--active {
+  color: #4caf50;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .corporate {
+    padding: 80px 0;
+  }
+
+  .corporate__content h2 {
+    margin-bottom: 40px;
+  }
+}
