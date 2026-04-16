@@ -1,33 +1,31 @@
 # Black Cube International – Corporate Website
 
-## 📌 Descripción
-Sitio web corporativo desarrollado desde cero para Black Cube International LLC. 
-El proyecto incluye diseño responsive, estructura semántica y despliegue en dominio propio.
+## 📌 Overview
+Corporate website developed from scratch for Black Cube International LLC.  
+The project includes responsive design, semantic structure, and deployment on a custom domain.
 
-## 🚀 Tecnologías
+## 🚀 Tech Stack
 - HTML5
 - CSS3
-- Diseño responsive
-- Deploy en dominio personalizado
+- Responsive Design
+- Custom Domain Deployment
 
-## 💡 Funcionalidades
-- Diseño adaptable a desktop y móvil
-- Secciones corporativas (About, Services, Contact)
-- Optimización básica de estructura semántica
-- Configuración de dominio y publicación en producción
+## 💡 Features
+- Fully responsive layout for desktop and mobile devices
+- Corporate sections (About, Services, Contact)
+- Basic semantic HTML structure optimization
+- Domain configuration and production deployment
 
-## 🌐 Demo
+## 🌐 Live Demo
 https://blackcubeinternational.us
 
-## 📷 Capturas
+## 📷 Screenshots
 <img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/81057a64-1e97-4f9e-a8ef-bdf070eda98a" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/592e38ae-7df4-4314-9165-a994915e50dd" />
 
-
-
 ![Home](./assets/home.png)
 
-## 🧠 Aprendizajes
-- Estructuración semántica HTML
-- Diseño responsive con CSS
-- Proceso de compra de dominio y despliegue en producción
+## 🧠 Key Highlights
+- Implemented semantic HTML structure
+- Built responsive layouts using CSS
+- Managed domain purchase and production deployment process
